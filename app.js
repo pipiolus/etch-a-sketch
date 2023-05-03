@@ -15,7 +15,7 @@ const createGrid = () => {
 const updateGrid = () => {
     if(input.value > 100) {
         window.alert("THE SIZE MUST BE LESS THAN 100")
-        return;
+        return resetGrid();
     }
 
     grid.innerHTML = "";
@@ -34,6 +34,13 @@ const updateGrid = () => {
     }
 };
 
+const resetGrid = () => {
+    grid.innerHTML = "";
+    input.value = "";
+    grid.style.setProperty("grid-template-columns", `repeat(16, 2fr)`);
+    grid.style.setProperty("grid-template-rows", `repeat(16, 2fr)`);
+    createGrid();
+}
 
 const square = document.querySelector('div');
 square.addEventListener('mouseover', (e) => {
@@ -42,13 +49,6 @@ square.addEventListener('mouseover', (e) => {
 
 input.addEventListener('change', updateGrid);
 
-reset.addEventListener('click', function() {
-    grid.innerHTML = "";
-    input.value = "";
-    grid.style.setProperty("grid-template-columns", `repeat(16, 2fr)`);
-    grid.style.setProperty("grid-template-rows", `repeat(16, 2fr)`);
-    createGrid();
-    
-});
+reset.addEventListener('click', resetGrid);
 
 createGrid();
