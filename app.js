@@ -2,6 +2,8 @@ const grid = document.querySelector('#container');
 const input = document.getElementById('quantity');
 const reset = document.querySelector('.reset');
 const rainbow = document.querySelector('.rainbow');
+const eraser = document.querySelector('.eraser');
+const dark = document.querySelector('.dark');
 
 
 
@@ -38,9 +40,15 @@ const updateGrid = () => {
 const resetGrid = () => {
     grid.innerHTML = "";
     input.value = "";
-    grid.style.setProperty("grid-template-columns", `repeat(16, 2fr)`);
-    grid.style.setProperty("grid-template-rows", `repeat(16, 2fr)`);
-    square.addEventListener('mouseover', setColor);
+    grid.style.setProperty(
+        "grid-template-columns",
+        `repeat(16, 2fr)`
+    );
+    grid.style.setProperty(
+        "grid-template-rows",
+        `repeat(16, 2fr)`
+    );
+    square.addEventListener('mouseover', (e) => e.target.style.backgroundColor = '#232326');
     createGrid();
 }
 
@@ -55,7 +63,7 @@ function generateColor(){
 
 
    function setColor(e){
-    e.target.style.backgroundColor = 'gray';
+    e.target.style.backgroundColor = '#232326';
    }
    
    const square = document.querySelector('div');
@@ -63,10 +71,20 @@ function generateColor(){
        e.target.classList.replace('square', 'color');
     })
     
+
+    dark.addEventListener('click', () => {
+        square.addEventListener('mouseover', (e) => e.target.style.backgroundColor = '#232326');
+    })
     
     rainbow.addEventListener('click', () => {
         square.addEventListener('mouseover', (e) => {
             e.target.style.backgroundColor = generateColor();
+        })
+    })
+
+    eraser.addEventListener('click', () => {
+        square.addEventListener('mouseover', (e) => {
+            e.target.style.backgroundColor = 'white';
         })
     })
 

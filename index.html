@@ -11,13 +11,15 @@
 </head>
 
 <body>
-            <button type="button" class="btn rainbow">TOGGLE RAINBOW</button>
+        <section>
+            <button type="button" class="btn dark">Dark</button>
+            <button type="button" class="btn rainbow">Rainbow</button>
+            <button type="button" class=" btn eraser">Eraser</button>
+            <label for="quantity">Select the size of the grid:</label>
+            <input type="range" name="quantity" id="quantity">
+            <button type="button" class="reset">CLEAR</button>
+        </section>
     <div id="container"></div>
-    <div class="user-interface">
-        <label for="quantity">Insert a number to a max of 100 for grid size:</label>
-        <input type="number" name="quantity" id="quantity">
-        <button type="button" class="reset">RESET</button>
-    </div>
 </body>
 
 </html>

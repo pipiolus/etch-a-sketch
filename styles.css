@@ -2,6 +2,8 @@ body{
     display: flex;
     justify-content: center;
     gap: 50px;
+    background: rgb(245,245,245);
+background: linear-gradient(353deg, rgba(245,245,245,0) 28%, rgba(255,255,255,1) 52%);
 }
 
 .user-interface{
@@ -28,32 +30,64 @@ body{
 }
 
 .color{
-    background-color: gray;
+    background-color: #232326;
     border: 1px solid black;
 }
 
 .reset{
-    width: 15vw;
-    height: 10vh;
-    font-size: 30px;
-    background-color: #92f71e;
-    border: 3px solid black;
-    border-radius: 15px;
-    transition: 0.5s;
+    font-weight: 800;
+    font-size: 20px;
+    border: 2px solid #2c43f2;
+    color: #2c43f2;
+    width: 7vw;
+    height: 7vh;
+    transition: 0.4s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .reset:hover{
-    background-color: #c7fa50;
     cursor: pointer;
+    scale: 1.1;
 }
 
 label{
+    padding-top: 15%;
     font-size: 20px;
     font-weight: 600;
+    text-align: center;
 }
 
 input{
     width: 12vw;
     height: 3vh;
     font-size: 16px;
+}
+
+section{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 20vw;
+    height: 50vh;
+    background-color: #d4d9d9;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.btn{
+    font-weight: 800;
+    font-size: 20px;
+    border: 3px solid #1d8bb3;
+    color: #1d8bb3;
+    width: 7vw;
+    height: 7vh;
+    transition: 0.4s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.btn:hover{
+    scale: 1.1;
+    cursor: pointer;
 }
