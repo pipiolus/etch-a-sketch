@@ -16,10 +16,7 @@ const createGrid = () => {
 };
 
 const updateGrid = () => {
-    if(input.value > 100) {
-        window.alert("THE SIZE MUST BE LESS THAN 100 SQUARES")
-        return resetGrid();
-    }
+
 
     grid.innerHTML = "";
     grid.style.setProperty(
