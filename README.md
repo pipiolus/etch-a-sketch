@@ -1,3 +1,7 @@
 # etch-a-sketch
 
-Project using pure vanilla JavaScript practicing manipulation of DOM to draw on a canvas.
+Application made with HTML, CSS and JavaScript practicing to draw on a canvas in diferent ways.
+
+To try the app: Fork this repo, open editor and drag the HTML file to your browser or `google-chrome index.html`. 
+
+
